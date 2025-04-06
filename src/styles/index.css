@@ -34,3 +34,8 @@ body {
 	background-color: #16171f;
 	font-family: sans-serif;
 }
+
+.active {
+	filter: brightness(0) invert(79%) sepia(48%) saturate(1663%) hue-rotate(30deg)
+		contrast(87%);
+}
