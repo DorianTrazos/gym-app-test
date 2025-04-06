@@ -4,6 +4,13 @@
 	box-sizing: border-box;
 }
 
+:root {
+	--primary-color: #90da11;
+	--secondary-color: #252533;
+	--neutral-color: #26262a;
+	--bg-color: #16171f;
+}
+
 img {
 	max-width: 100%;
 	display: block;
