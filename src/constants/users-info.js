@@ -1,29 +1,110 @@
-import { v4 } from 'uuid';
+export const ROUTINE_INFO = {
+	SUNDAY: 'DESCANSO',
+	MONDAY: {
+		muscles: 'Pecho, triceps, deltoides, trapecio',
+		exercises: [
+			{
+				name: 'Press banca con barra',
+				series: 3,
+				reps: 12,
+				lastWeight: 30
+			},
+			{
+				name: 'Fondos banco',
+				series: 3,
+				reps: 15,
+				lastWeight: 'N/A'
+			},
+			{
+				name: 'Elevaciones laterales',
+				series: 3,
+				reps: 12,
+				lastWeight: 6
+			},
+			{
+				name: 'Elevaciones frontales',
+				series: 3,
+				reps: 12,
+				lastWeight: 6
+			},
+			{
+				name: 'Press militar con mancuernas',
+				series: 3,
+				reps: 12,
+				lastWeight: 10
+			},
+			{
+				name: 'Triceps Polea Cuerda',
+				series: 3,
+				reps: 12,
+				lastWeight: 10
+			},
+			{
+				name: 'Triceps Polea manilla',
+				series: 3,
+				reps: 12,
+				lastWeight: 10
+			},
+			{
+				name: 'Triceps Polea palo',
+				series: 3,
+				reps: 12,
+				lastWeight: 10
+			}
+		]
+	},
 
-export const USERS_INFO = {
-	macarena: {
-		name: 'Macarena',
-		city: 'Gijón',
-		pets: [
-			{ id: v4(), name: 'gato' },
-			{ id: v4(), name: 'perro' },
-			{ id: v4(), name: 'mono' }
-		]
-	},
-	xavi: {
-		name: 'Xavi',
-		city: 'Lima',
-		pets: [
-			{ id: v4(), name: 'loro' },
-			{ id: v4(), name: 'cacatua' }
-		]
-	},
-	diego: {
-		name: 'Diego',
-		city: 'Bogotá',
-		pets: [
-			{ id: v4(), name: 'serpiente' },
-			{ id: v4(), name: 'perro' }
+	TUESDAY: {
+		muscles: 'Dorsales, biceps, trapecio, espalda, biceps, antebrazo',
+		exercises: [
+			{
+				name: 'Jalón al pecho',
+				series: 3,
+				reps: 12,
+				lastWeight: 20
+			},
+			{
+				name: 'Remo con máquina',
+				series: 3,
+				reps: 12,
+				lastWeight: 25
+			},
+			{
+				name: 'Face pulls',
+				series: 3,
+				reps: 12,
+				lastWeight: 15
+			},
+			{
+				name: 'Curl martillo',
+				series: 3,
+				reps: 12,
+				lastWeight: 10
+			},
+			{
+				name: 'Curl palmas hacia abajo',
+				series: 3,
+				reps: 12,
+				lastWeight: 10
+			},
+			{
+				name: 'Curl de muñeca',
+				series: 3,
+				reps: 12,
+				lastWeight: 10
+			},
+			{
+				name: 'Encogimiento con mancuernas',
+				series: 3,
+				reps: 12,
+				lastWeight: 10
+			},
+			{
+				name: 'Remo al menton',
+				series: 3,
+				reps: 12,
+				lastWeight: 20
+			}
 		]
 	}
 };
