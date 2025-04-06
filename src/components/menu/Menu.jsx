@@ -1,19 +1,11 @@
-import { StyledLink } from './menu.styles';
+import { NavLink } from 'react-router-dom';
 
 const Menu = () => {
 	return (
 		<nav>
 			<ul>
 				<li>
-					<StyledLink to='/'>HOME</StyledLink>
-				</li>
-				<li>
-					<StyledLink to='/about'>ABOUT</StyledLink>
-				</li>
-				<li>
-					<StyledLink to='/macarena'>USER - Macarena</StyledLink>
-					<StyledLink to='/xavi'>USER - Xavi</StyledLink>
-					<StyledLink to='/diego'>USER - Diego</StyledLink>
+					<NavLink to='/'>HOME</NavLink>
 				</li>
 			</ul>
 		</nav>
