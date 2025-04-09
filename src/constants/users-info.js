@@ -10,10 +10,16 @@ export const ROUTINE_INFO = {
 				lastWeight: 30
 			},
 			{
-				name: 'Fondos banco',
+				name: 'Press pecho en máquina',
 				series: 3,
 				reps: 15,
-				lastWeight: 'N/A'
+				lastWeight: 0
+			},
+			{
+				name: 'Aperturas pecho máquina',
+				series: 3,
+				reps: 15,
+				lastWeight: 0
 			},
 			{
 				name: 'Elevaciones laterales',
@@ -35,12 +41,6 @@ export const ROUTINE_INFO = {
 			},
 			{
 				name: 'Triceps Polea Cuerda',
-				series: 3,
-				reps: 12,
-				lastWeight: 10
-			},
-			{
-				name: 'Triceps Polea manilla',
 				series: 3,
 				reps: 12,
 				lastWeight: 10
