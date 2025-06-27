@@ -1,0 +1,11 @@
+.exercises {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-block: 2rem 5rem;
+}
+
+.iconBox {
+	width: 35%;
+}
