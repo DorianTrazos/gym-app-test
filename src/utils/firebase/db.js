@@ -1,4 +1,4 @@
-import { doc, getDoc, updateDoc } from 'firebase/firestore';
+import { doc, getDoc } from 'firebase/firestore';
 import { exercisesCollectionReference } from '../../lib/config/firebase.config';
 
 export const getExerciseById = async (id, routine) => {
@@ -25,26 +25,5 @@ export const getExerciseById = async (id, routine) => {
 	} catch (error) {
 		console.error('Error fetching document:', error);
 		throw error;
-	}
-};
-
-export const changeWeight = async (
-	newWeight,
-	userId,
-	setEdit,
-	setSelectedWeight
-) => {
-	try {
-		const docRef = doc(exercisesCollectionReference, userId);
-
-		await updateDoc(docRef, {
-			'routine.push.weight': Number(newWeight) // asegúrate de convertirlo a número si es necesario
-		});
-
-		console.log(`Peso actualizado a ${newWeight}kg para el usuario ${userId}`);
-		setSelectedWeight(null);
-		setEdit(false);
-	} catch (error) {
-		console.error('Error actualizando el peso:', error);
 	}
 };

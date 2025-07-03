@@ -3,14 +3,14 @@ import Routine from '../../../components/routine/Routine';
 import { AuthContext } from '../../../lib/contexts/Auth.context';
 import { getExerciseById } from '../../../utils/firebase/db';
 
-const Push = () => {
+const Leg = () => {
 	const { user, loading } = useContext(AuthContext);
 	const [exerciseData, setExerciseData] = useState(null);
 
 	useEffect(() => {
 		if (loading) return;
 		const fetchData = async () => {
-			const data = await getExerciseById(user.uid, 'push');
+			const data = await getExerciseById(user.uid, 'leg');
 			setExerciseData(data);
 		};
 
@@ -21,17 +21,12 @@ const Push = () => {
 
 	return (
 		<>
-			<h1>Day 1 - Push</h1>
-			{exerciseData?.map((routine, index) => (
-				<Routine
-					key={routine.exercise}
-					userId={user.uid}
-					index={index}
-					{...routine}
-				/>
+			<h1>Day 3 - Leg</h1>
+			{exerciseData?.map(routine => (
+				<Routine key={routine.exercise} userId={user.uid} {...routine} />
 			))}
 		</>
 	);
 };
 
-export default Push;
+export default Leg;
