@@ -6,16 +6,6 @@ const Menu = () => {
 		<nav>
 			<ul className={styles.menu}>
 				<li>
-					<NavLink className={styles['menu-link']} to='/'>
-						<img
-							className={styles['menu-link-icon']}
-							src='/assets/icons/home.svg'
-							alt=''
-						/>
-						<span>Home</span>
-					</NavLink>
-				</li>
-				<li>
 					<NavLink className={styles['menu-link']} to='/gym'>
 						<img
 							className={styles['menu-link-icon']}
@@ -23,6 +13,16 @@ const Menu = () => {
 							alt=''
 						/>
 						<span>Gym</span>
+					</NavLink>
+				</li>
+				<li>
+					<NavLink className={styles['menu-link']} to='/'>
+						<img
+							className={styles['menu-link-icon']}
+							src='/assets/icons/home.svg'
+							alt=''
+						/>
+						<span>Home</span>
 					</NavLink>
 				</li>
 				<li>

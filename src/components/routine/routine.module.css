@@ -1,0 +1,10 @@
+.routine-card {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 90%;
+	margin-inline: auto;
+	padding: 0 1rem;
+	border-radius: 1rem;
+	background-color: var(--secondary-color);
+}

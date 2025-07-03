@@ -1,5 +1,4 @@
 import { useContext } from 'react';
-
 import { AuthContext } from '../../lib/contexts/Auth.context';
 import { loginUser, logoutUser } from '../../utils/firebase/auth';
 
@@ -9,7 +8,7 @@ const Login = () => {
 	if (user)
 		return (
 			<>
-				<h2>Welcome {user.displayName}</h2>
+				<h1>Welcome {user.displayName}</h1>
 				<button onClick={logoutUser}>Sign Out</button>
 			</>
 		);

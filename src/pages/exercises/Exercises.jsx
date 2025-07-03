@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom';
 import Menu from '../../components/menu/Menu';
+import Push from './push/Push';
 
 const Exercises = () => {
 	const { type } = useParams();
@@ -8,7 +9,8 @@ const Exercises = () => {
 	return (
 		<>
 			<Menu />
-			<h1>Exercises</h1>
+
+			{type === 'front' && <Push />}
 		</>
 	);
 };
