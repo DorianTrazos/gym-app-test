@@ -42,9 +42,15 @@ const Routine = ({ exercise, index, weigth, reps, userId }) => {
 						))}
 					</select>
 
-					<div className={styles['edit-buttons']}>
-						<button onClick={() => setEdit(false)}>Cancel</button>
+					<div className={styles['routine-buttons']}>
 						<button
+							className={styles['routine-button-cancel']}
+							onClick={() => setEdit(false)}
+						>
+							Cancel
+						</button>
+						<button
+							className={styles['routine-button']}
 							onClick={() =>
 								changeWeight(
 									userId, // userId

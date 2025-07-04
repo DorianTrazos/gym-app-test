@@ -8,3 +8,24 @@
 	border-radius: 1rem;
 	background-color: var(--secondary-color);
 }
+
+.routine-buttons {
+	display: flex;
+	justify-content: space-between;
+	width: 70%;
+	margin-inline: auto;
+}
+
+.routine-button {
+	background-color: transparent;
+	padding: 1rem;
+	border: 1px solid var(--primary-color);
+	color: var(--primary-color);
+}
+
+.routine-button-cancel {
+	background-color: transparent;
+	padding: 1rem;
+	border: 1px solid var(--error-color);
+	color: var(--error-color);
+}
