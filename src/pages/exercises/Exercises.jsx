@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
 import Menu from '../../components/menu/Menu';
-import Back from './back/Back';
 import Leg from './leg/Leg';
+import Pull from './pull/Pull';
 import Push from './push/Push';
 
 const Exercises = () => {
@@ -13,7 +13,7 @@ const Exercises = () => {
 			<Menu />
 
 			{type === 'push' && <Push />}
-			{type === 'pull' && <Back />}
+			{type === 'pull' && <Pull />}
 			{type === 'leg' && <Leg />}
 		</>
 	);

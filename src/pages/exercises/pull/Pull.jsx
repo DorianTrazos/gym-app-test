@@ -3,7 +3,7 @@ import Routine from '../../../components/routine/Routine';
 import { AuthContext } from '../../../lib/contexts/Auth.context';
 import { getExerciseById } from '../../../utils/firebase/db';
 
-const Back = () => {
+const Pull = () => {
 	const { user, loading } = useContext(AuthContext);
 	const [exerciseData, setExerciseData] = useState(null);
 
@@ -22,11 +22,16 @@ const Back = () => {
 	return (
 		<>
 			<h1>Day 2 - Pull</h1>
-			{exerciseData?.map(routine => (
-				<Routine key={routine.exercise} userId={user.uid} {...routine} />
+			{exerciseData?.map((routine, index) => (
+				<Routine
+					key={routine.exercise}
+					userId={user.uid}
+					index={index}
+					{...routine}
+				/>
 			))}
 		</>
 	);
 };
 
-export default Back;
+export default Pull;

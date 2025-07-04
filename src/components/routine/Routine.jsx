@@ -16,7 +16,7 @@ const Routine = ({ exercise, index, weigth, reps, userId }) => {
 		exercise,
 		reps,
 		weigth
-	}; // datos actualizados o props iniciales
+	};
 
 	return (
 		<>

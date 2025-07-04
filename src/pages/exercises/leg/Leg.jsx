@@ -22,8 +22,13 @@ const Leg = () => {
 	return (
 		<>
 			<h1>Day 3 - Leg</h1>
-			{exerciseData?.map(routine => (
-				<Routine key={routine.exercise} userId={user.uid} {...routine} />
+			{exerciseData?.map((routine, index) => (
+				<Routine
+					key={routine.exercise}
+					userId={user.uid}
+					index={index}
+					{...routine}
+				/>
 			))}
 		</>
 	);
