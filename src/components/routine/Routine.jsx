@@ -8,6 +8,7 @@ import styles from './routine.module.css';
 
 const Routine = ({ exercise, index, weigth, reps, userId }) => {
 	const [edit, setEdit] = useState(false);
+	const [savingData, setSavingData] = useState(false);
 	const [selectedWeight, setSelectedWeight] = useState(null);
 	const { type } = useParams(); // push, pull, leg
 	const { routine } = useContext(AuthContext);
@@ -51,6 +52,7 @@ const Routine = ({ exercise, index, weigth, reps, userId }) => {
 						</button>
 						<button
 							className={styles['routine-button']}
+							disabled={savingData}
 							onClick={() =>
 								changeWeight(
 									userId, // userId
@@ -58,7 +60,8 @@ const Routine = ({ exercise, index, weigth, reps, userId }) => {
 									index, // exerciseIndex
 									selectedWeight, // newWeight
 									setEdit,
-									setSelectedWeight
+									setSelectedWeight,
+									setSavingData
 								)
 							}
 						>
@@ -77,9 +80,11 @@ const changeWeight = async (
 	exerciseIndex,
 	newWeight,
 	setEdit,
-	setSelectedWeight
+	setSelectedWeight,
+	setSavingData
 ) => {
 	try {
+		setSavingData(true);
 		const docRef = doc(exercisesCollectionReference, userId);
 		const docSnap = await getDoc(docRef);
 
@@ -109,6 +114,7 @@ const changeWeight = async (
 		await updateDoc(docRef, {
 			[`routine.${routineType}`]: routineArray
 		});
+		setSavingData(false);
 
 		console.log(
 			`Peso actualizado a ${newWeight} en ${routineType}[${exerciseIndex}] para el usuario ${userId}`

@@ -23,6 +23,11 @@
 	color: var(--primary-color);
 }
 
+.routine-button:disabled {
+	border: 1px solid gray;
+	color: gray;
+}
+
 .routine-button-cancel {
 	background-color: transparent;
 	padding: 1rem;
