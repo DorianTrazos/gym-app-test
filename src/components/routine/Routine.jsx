@@ -34,6 +34,7 @@ const Routine = ({ exercise, index, weigth, reps, userId }) => {
 					<select
 						name='weigth'
 						id='weigth'
+						value={selectedWeight ?? currentExercise.weigth}
 						onChange={event => setSelectedWeight(event.target.value)}
 					>
 						{WEIGHTS.map(weight => (
