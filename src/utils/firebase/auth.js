@@ -10,9 +10,9 @@ export const loginUser = async () => {
 	const provider = new GoogleAuthProvider();
 
 	try {
-		const result = await signInWithPopup(auth, provider);
-		const user = result.user;
-		await initializeUserRoutineIfNeeded(user.uid);
+		await signInWithPopup(auth, provider);
+		// const user = result.user;
+		// await initializeUserRoutineIfNeeded(user.uid);
 	} catch (error) {
 		console.error('Error al iniciar sesión:', error.code, error.message);
 	}
